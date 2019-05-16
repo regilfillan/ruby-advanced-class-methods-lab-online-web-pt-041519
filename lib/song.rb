@@ -55,5 +55,14 @@ class Song
     song.artist_name = song_array[0]
     return song
   end
+  
+def self.create_from_filename(filename)
+   song = Song.new_from_filename(filename)
+   @@all << song
+ end
 
+ def self.destroy_all
+   self.all.clear
+ end
+ 
 end
